@@ -278,6 +278,7 @@ class TS_SVGStringPreview(SaveImage):
         self.type = "temp"
         self.prefix_append = "_temp_" + ''.join(random.choice("abcdefghijklmnopqrstupvxyz1234567890") for x in range(5))
         self.compress_level = 4
+        self.preview = True
 
     def svg_preview(self, SVG_String):
         doc = fitz.open(stream=SVG_String.encode('utf-8'), filetype="svg")
